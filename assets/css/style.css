@@ -1,5 +1,21 @@
 .login-panel {
   width: 25%;
-  margin: 10px auto; }
+  margin: 10px auto;
+  padding-top: 10%; }
+  @media screen and (max-width: 500px) {
+    .login-panel {
+      width: 100%; } }
+  @media screen and (min-width: 500px) {
+    .login-panel {
+      width: 80%; } }
+  @media screen and (min-width: 625px) {
+    .login-panel {
+      width: 60%; } }
+  @media screen and (min-width: 900px) {
+    .login-panel {
+      width: 40%; } }
+  @media screen and (min-width: 1200px) {
+    .login-panel {
+      width: 30%; } }
 
 /*# sourceMappingURL=style.css.map */

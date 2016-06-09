@@ -1,4 +1,21 @@
 .login-panel{
   width:25%;
   margin:10px auto;
+  padding-top: 10%;
+  @media screen and (max-width:500px){
+    width:100%;
+  }
+
+  @media screen and (min-width:500px){
+    width:80%;
+  }
+  @media screen and (min-width:625px){
+    width:60%;
+  }
+  @media screen and (min-width:900px){
+    width:40%;
+  }
+  @media screen and (min-width:1200px){
+    width:30%;
+  }
 }
