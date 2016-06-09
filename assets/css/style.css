@@ -17,5 +17,8 @@
   @media screen and (min-width: 1200px) {
     .login-panel {
       width: 30%; } }
+  @media screen and (min-width: 1500px) {
+    .login-panel {
+      width: 20%; } }
 
 /*# sourceMappingURL=style.css.map */

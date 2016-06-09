@@ -13,8 +13,11 @@ class UserModel extends CI_Model {
     if($this->db->count_all_results() == 1){
 
       $this->setUserSession($data);
+      return $data;
 
     }
+
+    return false;
 
   }
 
@@ -30,6 +33,10 @@ class UserModel extends CI_Model {
 
     return $this->session->userdata('user');
 
+  }
+
+  public function logout(){
+    $this->session->unset('user');
   }
 
 

@@ -3,6 +3,22 @@
 
 
  <div class="login-panel">
+
+    <!--Show Erros  -->
+
+    <?php
+    if($this->session->flashdata('errors')):
+      ?>
+
+      <div class="alert alert-warning">
+
+            <?= $this->session->flashdata('errors');?>
+
+      </div>
+
+    <?php
+    endif
+     ?>
    <div class="panel panel-info">
 
      <div class="panel-heading">
