@@ -3,11 +3,16 @@
 class UserModel extends CI_Model {
 
 
+  private $_pk = 'id';
+
+  private $_table = 'users';
+
+
   public function Auth($email,$password){
 
-    $q = $this->db->select('email,password')->where(['email'=>$email,'password' => $password])->limit('1')->get('users');
+    $q = $this->db->select('id,email,password')->where(['email'=>$email,'password' => $password])->limit('1')->get('users');
 
-    $data = $q->result();
+    $data = $q->row_array();
 
 
     if($this->db->count_all_results() == 1){
@@ -37,6 +42,16 @@ class UserModel extends CI_Model {
 
   public function logout(){
     $this->session->unset('user');
+  }
+
+  public function find($id){
+
+    $q = $this->db->where($this->_pk,$id)->get($this->_table);
+
+    if($q){
+      return $q->row();
+    }
+
   }
 
 

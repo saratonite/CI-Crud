@@ -53,7 +53,12 @@ class User extends CI_Controller {
 
   public function profile(){
 
-    var_dump($this->UserModel->getUserSession());
+    //var_dump($this->UserModel->getUserSession());
+
+    $data['userdata'] = $this->UserModel->find(1);
+
+
+    $this->load->view('user/profile',$data);
 
   }
 

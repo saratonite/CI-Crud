@@ -11,4 +11,10 @@
     </title>
   </head>
   <body>
+
+    <?php
+    if(isset($APP_TOP_NAV)){
+      $this->load->view($APP_TOP_NAV);
+    }
+     ?>
   <div class="container-fluid">
